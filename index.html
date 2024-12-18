@@ -1,17 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Enable Google AdSense on GitHub Pages</title>
     <meta name="google-adsense-account" content="ca-pub-9675036487434097">
-    <title>Document</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9675036487434097"
         crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <h1>Hello World</h1>
+    <h1>How to Enable Google AdSense on GitHub Pages</h1>
+    <p>Enabling Google AdSense on GitHub Pages requires embedding AdSense ads into your website's HTML, JavaScript, or Markdown. However, GitHub Pages imposes some restrictions, such as not supporting server-side scripts like PHP, which might affect some advanced AdSense features. Below is a step-by-step guide to integrate AdSense into your GitHub Pages:</p>
+
+    <hr>
+
+    <h2>1. Set up a Google AdSense Account</h2>
+    <ol>
+        <li>Go to the <a href="https://www.google.com/adsense/">Google AdSense website</a>.</li>
+        <li>Sign up for an account and provide your GitHub Pages site URL for approval.</li>
+        <li>Wait for Google to approve your website. You might need to verify ownership by adding a meta tag to your website.</li>
+    </ol>
+
+    <hr>
+
+    <h2>2. Add the Verification Meta Tag to GitHub Pages</h2>
+    <p>Once Google approves your AdSense account, follow these steps:</p>
+    <ol>
+        <li>In your AdSense dashboard, you'll find a meta tag for site verification.</li>
+        <li>Copy the meta tag code.</li>
+        <li>Add the meta tag to the <code>&lt;head&gt;</code> section of your website's <code>index.html</code> file or main layout file if using Jekyll.</li>
+    </ol>
+    <pre><code>&lt;meta name="google-site-verification" content="your-meta-tag-content" /&gt;</code></pre>
+    <p>Commit and push the changes to your GitHub repository.</p>
+
+    <hr>
+
+    <h2>3. Get the AdSense Ad Code</h2>
+    <ol>
+        <li>In your AdSense dashboard, create a new ad unit or use Auto Ads.</li>
+        <li>Copy the generated ad code.</li>
+    </ol>
+
+    <hr>
+
+    <h2>4. Embed AdSense Ad Code in GitHub Pages</h2>
+    <ol>
+        <li>Open the file where you want to display ads (e.g., <code>index.html</code> or any page).</li>
+        <li>Paste the AdSense code in the desired location. Example:</li>
+    </ol>
+    <pre><code>&lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"&gt;&lt;/script&gt;
+&lt;ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-xxxxxxxxxx"
+     data-ad-slot="xxxxxxxxxx"
+     data-ad-format="auto"&gt;&lt;/ins&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;</code></pre>
+    <p>Commit and push the changes to GitHub.</p>
+
+    <hr>
+
+    <h2>5. Verify Ads Are Displaying</h2>
+    <ol>
+        <li>Allow some time for Google to process your changes.</li>
+        <li>Visit your GitHub Pages URL to ensure ads are appearing.</li>
+    </ol>
+
+    <hr>
+
+    <h2>6. Considerations and Tips</h2>
+    <ul>
+        <li><strong>HTTPS Required</strong>: GitHub Pages uses HTTPS by default, and AdSense works fine with HTTPS.</li>
+        <li><strong>Custom Domains</strong>: If you're using a custom domain, ensure it's set up correctly in both GitHub and AdSense.</li>
+        <li><strong>Ad Placement Policy</strong>: Ensure your ad placements comply with Google AdSense policies.</li>
+        <li><strong>Static Content</strong>: GitHub Pages hosts static sites. AdSense works since it uses client-side JavaScript.</li>
+        <li><strong>Testing Ads</strong>: Use Google AdSense test ads or preview functionality during development.</li>
+    </ul>
+
+    <hr>
+
+    <p>Let me know if you need more detailed assistance with any specific step!</p>
     <div align="center">
         <script async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9675036487434097"
@@ -24,5 +93,4 @@
         </script>
     </div>
 </body>
-
 </html>
